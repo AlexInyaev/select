@@ -6,6 +6,8 @@ const options = document.querySelectorAll('.option'),
     selectRightProgress = document.querySelector('.selectRightProgress'),
     wrapper = document.querySelector('.wrapper');
 
+let out = '';
+
 selectHeader.onclick = openList;
 
 
@@ -24,12 +26,10 @@ function openList() {
 }
 
 function selectItem(item) {
-    console.log(item.textContent)
     select.textContent = item.textContent;
     selectHeader.style.display = 'flex';
     selectBody.style.display = 'none';
     selectRightProgress.style.display = 'none';
     wrapper.classList.remove('addBorder');
-
 
 }
