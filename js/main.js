@@ -1,37 +1,35 @@
 
-let options = document.querySelectorAll('.option');
-let select = document.querySelector('.select');
-select.onclick = openList;
-// let index = 1;
+const options = document.querySelectorAll('.option'),
+    select = document.querySelector('.select'),
+    selectHeader = document.querySelector('.selectHeader'),
+    selectBody = document.querySelector('.selectBody'),
+    selectRightProgress = document.querySelector('.selectRightProgress'),
+    wrapper = document.querySelector('.wrapper');
+
+selectHeader.onclick = openList;
+
 
 
 options.forEach(item => {
-    item.onclick = selectItem;
+    item.onclick = () => selectItem(item);
 })
-// function toggle() {
-//     if (index % 2 === 0) {
-//         options.forEach(item => {
-//             item.classList.add('hide')
-//         })
-//     } else {
-//         options.forEach(item => {
-//             item.classList.remove('hide')
-//         })
-//     }
 
-//     index++;
-
-// }
 
 function openList() {
-    console.log('work')
-    options.forEach(item => {
-        item.classList.remove('hide')
-    })
+
+    selectHeader.style.display = 'none';
+    selectBody.style.display = 'block';
+    selectRightProgress.style.display = 'block';
+    wrapper.classList.add('addBorder');
 }
 
-function selectItem() {
-    options.forEach(item => {
-        item.classList.add('hide')
-    })
+function selectItem(item) {
+    console.log(item.textContent)
+    select.textContent = item.textContent;
+    selectHeader.style.display = 'flex';
+    selectBody.style.display = 'none';
+    selectRightProgress.style.display = 'none';
+    wrapper.classList.remove('addBorder');
+
+
 }
