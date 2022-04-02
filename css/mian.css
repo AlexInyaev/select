@@ -1,0 +1,23 @@
+/* body {
+    text-align: center;
+} */
+
+.wrapper {
+    border: 1px solid green;
+    border-radius: 30px;
+    width: 300px;
+    margin: auto;
+    padding-left: 10px;
+}
+
+.option {
+    background: red;
+}
+
+.hide {
+    display: none;
+}
+
+.option:hover {
+    background-color: blue;
+}
