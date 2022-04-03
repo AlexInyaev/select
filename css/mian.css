@@ -39,12 +39,7 @@ body {
     line-height: 19px;
 }
 
-.selectBody {
-    padding-top: 5px;
-    display: none;
-    overflow: scroll;
 
-}
 
 
 
@@ -75,22 +70,28 @@ body {
 }
 
 
+.selectBody {
+    padding-top: 5px;
+    display: none;
+    overflow: scroll;
 
-.selectBody {}
+}
+
 
 .selectBody::-webkit-scrollbar {
 
     width: 6px;
     height: 0;
+
+
 }
 
 .selectBody::-webkit-scrollbar-thumb {
     background-color: #4A4A4A;
-    border-radius: 2px;
+    border-radius: 5px;
 
 }
 
 .selectBody::-webkit-scrollbar-track {
     background-color: #F0F2F6;
-
 }

@@ -17,7 +17,7 @@ options.forEach(item => {
 
 
 function openList() {
-
+    // alert(4)
     selectHeader.style.display = 'none';
     selectBody.style.display = 'block';
     wrapper.classList.add('addBorder');
