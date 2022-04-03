@@ -8,7 +8,7 @@ const options = document.querySelectorAll('.option'),
 let out = '';
 
 selectHeader.onclick = openList;
-
+wrapper.onmouseleave = cursorLeaveWrapper;
 
 
 options.forEach(item => {
@@ -17,7 +17,6 @@ options.forEach(item => {
 
 
 function openList() {
-    // alert(4)
     selectHeader.style.display = 'none';
     selectBody.style.display = 'block';
     wrapper.classList.add('addBorder');
@@ -30,3 +29,11 @@ function selectItem(item) {
     wrapper.classList.remove('addBorder');
 
 }
+
+function cursorLeaveWrapper() {
+    selectHeader.style.display = 'flex';
+    selectBody.style.display = 'none';
+    wrapper.classList.remove('addBorder');
+}
+
+
