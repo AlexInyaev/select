@@ -3,13 +3,14 @@ const options = document.querySelectorAll('.option'),
     select = document.querySelector('.select'),
     selectHeader = document.querySelector('.selectHeader'),
     selectBody = document.querySelector('.selectBody'),
-    // scrollElem = document.querySelector('.scrollElem'),
+    // body = document.querySelector('body'),
     // wrapperScroll = document.querySelector('.wrapperScroll'),
     wrapper = document.querySelector('.wrapper');
 
 let out = '';
 
 selectHeader.onclick = openList;
+// body.onclick = cursorLeaveWrapper;
 wrapper.onmouseleave = cursorLeaveWrapper;
 
 
