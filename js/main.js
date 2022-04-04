@@ -4,7 +4,6 @@ const options = document.querySelectorAll('.option'),
     selectHeader = document.querySelector('.selectHeader'),
     selectBody = document.querySelector('.selectBody'),
     body = document.querySelector('body'),
-    // wrapperScroll = document.querySelector('.wrapperScroll'),
     wrapper = document.querySelector('.wrapper');
 
 
@@ -16,7 +15,7 @@ selectHeader.onclick = (e) => {
 
 document.addEventListener('click', (e) => {
     const target = e.target;
-    const its_menu = target == selectBody || selectBody.contains(target); //если виден selectBody
+    const its_menu = target == selectBody || selectBody.contains(target);
     const its_btnMenu = target == selectHeader;
     const menu_is_active = (selectBody.style.display == 'block')
 
@@ -26,13 +25,9 @@ document.addEventListener('click', (e) => {
 });
 // ********************************************** clickOutWrapper ***************************************
 
-
-
-
 options.forEach(item => {
     item.onclick = () => selectItem(item);
 })
-
 
 function openList() {
     selectHeader.style.display = 'none';
@@ -45,7 +40,7 @@ function selectItem(item) {
     selectHeader.style.display = 'flex';
     selectBody.style.display = 'none';
     wrapper.classList.remove('addBorder');
-
+    console.log(item.textContent);
 }
 
 function clickOutWrapper() {
